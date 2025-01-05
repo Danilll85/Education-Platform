@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -79,10 +80,10 @@ p:where(:not([class]):not(:last-child)) {
 /**
    Упрощаем работу с изображениями
   */
-img {
-  display: block;
-  max-width: 100%;
-}
+/* img {
+  display: block; */
+/* max-width: 100%; */
+/* } */
 
 /**
    Наследуем свойства шрифт для полей ввода
@@ -149,9 +150,15 @@ svg * {
   /* colors */
   --main-bg-color: #ffffff;
   --pink-btn-color: #f72585;
+  --pink-circle-color: #fa6bac;
   --blue-dark-color: #1c3554;
+  --blue-dark-auxiliary-color: #021934;
   --grey-color: #808080;
 
   /* fonts */
   --montserrat-font: "Montserrat", sans-serif, italic;
+  --rubik-font: "Rubik", sans-serif, italic;
+
+  /* indents */
+  --auxiliary-margin: 2.5rem;
 }

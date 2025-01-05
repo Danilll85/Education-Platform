@@ -1,0 +1,48 @@
+<div class="promo-wrapper">
+    <div class="left-part">
+        <div class="text-wrapper">
+            <h1>Find the Best <br> Cources and <br> Amazing Mentor</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit<br> amet luctus venenatis,
+                lectus
+                magna fringilla urna, porttitor rhoncus
+            </p>
+        </div>
+        <app-searchbar-btn></app-searchbar-btn>
+        <ul class="icons-wrapper">
+            @for (advantage of advantages; track advantage) {
+            <li>
+                <app-advantage [path]="advantage.src" [title]="advantage.title"></app-advantage>
+            </li>
+            }
+        </ul>
+    </div>
+    <div class="right-part">
+        <span class="img-wrapper">
+            <img src="./../../assets/Image Place Holder.svg" alt="loading...">
+        </span>
+        <span class="circle-wrapper">
+            <span class="circle"></span>
+        </span>
+        <span class="bell-icon-wrapper">
+            <img src="./../../assets/bell.svg" alt="loading...">
+        </span>
+        <span class="verification-icon-wrapper">
+            <img src="./../../assets/Verification Icon.svg" alt="loading...">
+        </span>
+        <span class="love-icon-wrapper">
+            <img src="./../../assets/heart.svg" alt="loading...">
+        </span>
+        <span class="review-wrapper">
+            <div class="number">500+</div>
+            <div class="description">Total Review</div>
+            <div class="stars">
+                <img src="./../../assets/Star.svg" alt="">
+                <img src="./../../assets/Star.svg" alt="">
+                <img src="./../../assets/Star.svg" alt="">
+                <img src="./../../assets/Star.svg" alt="">
+                <img src="./../../assets/Star.svg" alt="">
+            </div>
+        </span>
+    </div>
+</div>

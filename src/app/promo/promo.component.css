@@ -1,0 +1,254 @@
+.promo-wrapper {
+  display: flex;
+  gap: 3.5rem;
+  margin-inline: var(--auxiliary-margin);
+  background-color: var(--blue-dark-auxiliary-color);
+}
+
+.left-part {
+  padding-left: 4rem;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 5.5rem;
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--main-bg-color);
+  font-family: var(--rubik-font);
+}
+
+p {
+  font-family: var(--montserrat-font);
+  color: var(--main-bg-color);
+  padding-bottom: 4.125rem;
+}
+
+.icons-wrapper {
+  text-decoration: none;
+  display: flex;
+  gap: 3rem;
+  color: white;
+  padding-top: 3.5rem;
+  padding-bottom: 5.5rem;
+}
+
+.icons-wrapper > img {
+  display: inline !important;
+}
+
+.icons-wrapper > li {
+  color: var(--main-bg-color);
+  font-family: var(--rubik-font);
+  font-weight: 700;
+}
+
+.right-part {
+  position: relative;
+  display: flex;
+  align-items: end;
+  border: none;
+}
+
+.img-wrapper {
+  display: flex;
+  align-items: end;
+  padding-top: 4.1rem;
+  order: 1;
+  z-index: 1;
+}
+
+.circle-wrapper {
+  position: relative;
+  margin-top: 12.5rem;
+  margin-right: 6rem;
+  margin-bottom: 5.125rem;
+  order: 0;
+}
+
+.circle {
+  position: absolute;
+  bottom: 0;
+  left: 9.5rem;
+  z-index: 0;
+  width: 29.125rem;
+  height: 29.125rem;
+  border-radius: 50%;
+  background: var(--pink-circle-color);
+  box-shadow: -10rem 0 25rem rgba(253, 0, 148, 0.5);
+}
+
+.bell-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: absolute;
+  background-color: #4586d6;
+  width: 4rem;
+  height: 4rem;
+  right: 23.5rem;
+  top: 9rem;
+  transform: rotateZ(-22deg);
+}
+
+.verification-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: absolute;
+  /* background-color: var(--pink-circle-color); */
+  width: 4rem;
+  height: 4rem;
+  right: 1rem;
+  top: 24.25rem;
+  transform: rotateZ(29deg);
+}
+
+.love-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: absolute;
+  background-color: var(--blue-dark-color);
+  width: 4rem;
+  height: 4rem;
+  right: 26rem;
+  top: 28rem;
+  transform: rotateZ(-19deg);
+}
+
+.review-wrapper {
+  position: absolute;
+  background-color: var(--main-bg-color);
+  width: 11.5rem;
+  height: 7.313rem;
+  bottom: 3rem;
+  z-index: 2;
+  right: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > .number {
+    color: var(--blue-dark-color);
+    font-family: var(--rubik-font);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.063rem;
+  }
+
+  > .description {
+    color: var(--blue-dark-color);
+    font-family: var(--rubik-font);
+    font-weight: 400;
+    padding-bottom: 0.25rem;
+  }
+
+  > .stars {
+    display: flex;
+    padding-inline: 1rem;
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .promo-wrapper {
+    gap: 4.6rem;
+  }
+
+  .left-part {
+    padding-left: 5.3rem;
+  }
+
+  .text-wrapper {
+    gap: 2rem;
+    padding-top: 7.3rem;
+  }
+
+  h1 {
+    font-size: 5.3rem;
+  }
+
+  p {
+    padding-bottom: 5.5rem;
+  }
+
+  .icons-wrapper {
+    gap: 4rem;
+    padding-top: 4.6rem;
+    padding-bottom: 7.3rem;
+  }
+
+  .img-wrapper {
+    padding-top: 5.5rem;
+  }
+
+  .circle-wrapper {
+    margin-top: 16.5rem;
+    margin-right: 8rem;
+    margin-bottom: 6.8rem;
+  }
+
+  .circle {
+    left: 12.6rem;
+    width: 38.8rem;
+    height: 38.8rem;
+    box-shadow: -13.3rem 0 33.3rem rgba(253, 0, 148, 0.5);
+  }
+
+  .bell-icon-wrapper {
+    width: 5.3rem;
+    height: 5.3rem;
+    right: 31.3rem;
+    top: 12rem;
+  }
+
+  .verification-icon-wrapper {
+    width: 5.3rem;
+    height: 5.3rem;
+    right: 1.3rem;
+    top: 32.3rem;
+  }
+
+  .love-icon-wrapper {
+    width: 5.3rem;
+    height: 5.3rem;
+    right: 34.5rem;
+    top: 37.3rem;
+  }
+
+  .review-wrapper {
+    width: 15.3rem;
+    height: 9.75rem;
+    bottom: 4rem;
+    right: 8rem;
+
+    > .number {
+      font-size: 2rem;
+      padding-top: 1.3rem;
+      padding-bottom: 0.084rem;
+    }
+
+    > .description {
+      padding-bottom: 0.3rem;
+    }
+
+    > .stars {
+      padding-inline: 1.3rem;
+      gap: 0.6rem;
+    }
+  }
+
+  .img-wrapper > img {
+    width: 44.084rem;
+    height: 56.9rem;
+  }
+}
