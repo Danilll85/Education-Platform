@@ -1,0 +1,38 @@
+@import url("./../../styles.css");
+
+.searchbar-wrapper {
+  position: relative;
+  width: 443px;
+  height: 48px;
+}
+
+.searchbar-wrapper > input {
+  width: inherit;
+  height: inherit;
+  box-sizing: border-box;
+  text-indent: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--grey-color);
+}
+
+.searchbar-wrapper > input::placeholder {
+  color: var(--grey-color);
+  font-family: var(--montserrat-font);
+  /* padding-block: 12px; */
+}
+
+.searchbar-wrapper > .text-field-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  right: 0.875rem;
+  width: 1rem;
+  cursor: pointer;
+  color: var(--grey-color);
+  transition: color 0.15s ease-in-out;
+}
+
+/* Implement hower effect to svg */
