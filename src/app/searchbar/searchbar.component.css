@@ -2,16 +2,16 @@
 
 .searchbar-wrapper {
   position: relative;
-  width: 443px;
-  height: 48px;
+  width: 27.7rem;
+  height: 3rem;
 }
 
 .searchbar-wrapper > input {
   width: inherit;
   height: inherit;
   box-sizing: border-box;
-  text-indent: 16px;
-  border-radius: 8px;
+  text-indent: 1rem;
+  border-radius: 0.5rem;
   border: 1px solid var(--grey-color);
 }
 
@@ -36,3 +36,19 @@
 }
 
 /* Implement hower effect to svg */
+
+@media screen and (min-width: 1920px) {
+  .searchbar-wrapper {
+    width: 36.9rem;
+    height: 4rem;
+  }
+  .searchbar-wrapper > input {
+    text-indent: 1.3rem;
+    border-radius: 0.6rem;
+  }
+
+  .searchbar-wrapper > .text-field-icon {
+    right: 1.16rem;
+    width: 1.3rem;
+  }
+}
