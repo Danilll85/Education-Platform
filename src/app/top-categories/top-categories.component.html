@@ -1,0 +1,8 @@
+<div class="top-categories-wrapper">
+    <h2>Top Categories</h2>
+    <div class="category-cards-wrapper">
+        @for (card of topCategoriesCards; track card) {
+        <app-category-card [path]="card.path" [category]="card.category"></app-category-card>
+        }
+    </div>
+</div>

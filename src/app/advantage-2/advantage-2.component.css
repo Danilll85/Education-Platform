@@ -1,0 +1,41 @@
+.advantage-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.num {
+  color: var(--blue-dark-color);
+  font-family: var(--rubik-font);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.desc {
+  color: var(--blue-dark-color);
+  font-family: var(--rubik-font);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1440px) {
+  .advantage-wrapper {
+    > img {
+      width: 5.3rem;
+      height: 5.3rem;
+    }
+  }
+
+  .num {
+    font-size: 2.6rem;
+  }
+
+  .desc {
+    font-size: 2rem;
+  }
+}

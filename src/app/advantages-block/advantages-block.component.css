@@ -1,0 +1,13 @@
+.advantages-block-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 11rem;
+  margin-block: 10rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .advantages-block-wrapper {
+    gap: 14.6rem;
+    margin-block: 13.3rem;
+  }
+}

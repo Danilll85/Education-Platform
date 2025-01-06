@@ -1,0 +1,36 @@
+.top-categories-wrapper {
+  margin-top: 10rem;
+  margin-inline: var(--default-margin);
+}
+
+.top-categories-wrapper > h2 {
+  color: var(--blue-dark-color);
+  font-family: var(--rubik-font);
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.category-cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .top-categories-wrapper {
+    margin-inline: 8.6rem;
+    margin-top: 13.3rem;
+  }
+
+  .top-categories-wrapper > h2 {
+    font-size: 4rem;
+    margin-bottom: 4.6rem;
+  }
+
+  .category-cards-wrapper {
+    column-gap: 1.3rem;
+    row-gap: 1.3rem;
+  }
+}

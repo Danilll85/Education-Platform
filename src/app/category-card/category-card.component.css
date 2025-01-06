@@ -1,0 +1,48 @@
+.category-card-wrapper {
+  box-sizing: border-box;
+  height: 21.875rem;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.category-card-wrapper > img {
+  width: 18.5rem;
+  height: 21.875rem;
+}
+
+.title {
+  position: absolute;
+  padding-inline: 3rem;
+  width: 60%;
+  bottom: 2.5rem;
+  left: 0;
+  color: var(--main-bg-color);
+  font-family: var(--rubik-font);
+  font-weight: 500;
+  font-size: 1.5rem;
+  word-break: break-word;
+  text-align: center;
+  cursor: pointer;
+}
+
+.category-card-wrapper:hover {
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 1440px) {
+  .category-card-wrapper {
+    height: 29.16rem;
+  }
+  .category-card-wrapper > img {
+    width: 24.6rem;
+    height: 29.16rem;
+    /* height: 100%; */
+  }
+
+  .title {
+    padding-inline: 4rem;
+    bottom: 3.3rem;
+    left: 0;
+    font-size: 2rem;
+  }
+}
