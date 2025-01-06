@@ -102,7 +102,7 @@ p {
   align-items: center;
   z-index: 2;
   position: absolute;
-  /* background-color: var(--pink-circle-color); */
+  background-color: var(--pink-btn-color);
   width: 4rem;
   height: 4rem;
   right: 1rem;

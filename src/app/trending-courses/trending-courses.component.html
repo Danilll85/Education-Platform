@@ -1,0 +1,18 @@
+<div class="trending-courses-wrapper">
+    <h2>Trending Courses</h2>
+    <div class="nav-panel">
+        <button class="nav-panel-btn">All</button>
+        <button class="nav-panel-btn">Business</button>
+        <button class="nav-panel-btn">Development</button>
+        <button class="nav-panel-btn">Marketing</button>
+    </div>
+    <div class="cards-wrapper">
+        @for (card of cards; track card) {
+        <app-card [category]="card.category" [title]="card.title" [description]="card.description"
+            [mentor]="card.mentor" [rating]="card.rating" [ratingCount]="card.ratingCount" [price]="card.price"
+            [discount]="card.discount" [path]="card.path">
+        </app-card>
+        }
+    </div>
+    <button id="more-items-btn">More Courses</button>
+</div>

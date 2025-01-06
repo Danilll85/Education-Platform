@@ -149,10 +149,12 @@ svg * {
 :root {
   /* colors */
   --main-bg-color: #ffffff;
+  --pink-color: #f72585;
   --pink-btn-color: #f72585;
   --pink-circle-color: #fa6bac;
   --blue-dark-color: #1c3554;
   --blue-dark-auxiliary-color: #021934;
+  --blue-light-btn-color: #4586d6;
   --grey-color: #808080;
 
   /* fonts */
@@ -160,5 +162,6 @@ svg * {
   --rubik-font: "Rubik", sans-serif, italic;
 
   /* indents */
+  --default-margin: 6.5rem;
   --auxiliary-margin: 2.5rem;
 }

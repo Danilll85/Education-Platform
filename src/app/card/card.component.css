@@ -1,0 +1,168 @@
+.card-wrapper {
+  position: relative;
+  width: 18.438rem;
+  height: 26.688rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-wrapper:hover {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  padding: 1rem;
+}
+.card-content > img {
+  width: 16.431rem;
+  height: 13rem;
+}
+
+.card-title {
+  position: absolute;
+  top: 13rem;
+  right: 5.125rem;
+  padding-inline: 1.5rem;
+  padding-block: 0.25rem;
+  background-color: var(--blue-light-btn-color);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--main-bg-color);
+  font-family: var(--montserrat-font);
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.additional-info {
+  display: flex;
+  flex-direction: column;
+
+  > .card-desription {
+    width: 95%;
+    color: var(--blue-dark-color);
+    font-family: var(--rubik-font);
+    font-weight: 500;
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    word-break: break-word;
+  }
+
+  > .card-mentor-info {
+    color: var(--pink-color);
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+
+  > .card-rate-info {
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    color: var(--grey-color);
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+    font-size: 0.875rem;
+    > .stars {
+      display: flex;
+      gap: 0.25rem;
+      > img {
+        width: 1.003rem;
+        height: 1rem;
+      }
+    }
+  }
+}
+
+.no-feedback {
+  color: var(--grey-color);
+  color: var(--grey-color);
+  font-family: var(--montserrat-font);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.card-cost-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card-discount {
+  color: var(--grey-color);
+  font-family: var(--montserrat-font);
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+.card-price {
+  color: var(--blue-dark-color);
+  font-family: var(--rubik-font);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .card-wrapper {
+    width: 24.6rem;
+    height: 35.6rem;
+  }
+
+  .card-content {
+    padding: 1.3rem;
+  }
+  .card-content > img {
+    width: 21.9rem;
+    height: 17.3rem;
+  }
+
+  .card-title {
+    top: 17.3rem;
+    right: 6.8rem;
+    padding-inline: 2rem;
+    padding-block: 0.3rem;
+    border-radius: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .additional-info {
+    > .card-desription {
+      font-size: 1.3rem;
+      padding-top: 1.3rem;
+      padding-bottom: 0.5rem;
+    }
+
+    > .card-mentor-info {
+      font-size: 1rem;
+    }
+
+    > .card-rate-info {
+      gap: 0.6rem;
+      padding-top: 0.6rem;
+      padding-bottom: 1.3rem;
+      font-size: 1.16rem;
+      > .stars {
+        gap: 0.3rem;
+        > img {
+          width: 1.33rem;
+          height: 1.3rem;
+        }
+      }
+    }
+  }
+
+  .no-feedback {
+    font-size: 1.16rem;
+  }
+
+  .card-cost-info {
+    gap: 0.6rem;
+  }
+  .card-discount {
+    font-size: 1.3rem;
+  }
+
+  .card-price {
+    font-size: 2rem;
+  }
+}

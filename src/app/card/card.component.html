@@ -1,0 +1,63 @@
+<div class="card-wrapper">
+    <div class="card-content">
+        <img src="{{path}}" alt="loading...">
+        <span class="card-title">{{title}}</span>
+        <div class="additional-info">
+            <div class="card-desription">{{description | titlecase}}</div>
+            <div class="card-mentor-info">{{mentor | titlecase}}</div>
+            <div class="card-rate-info">
+                @switch(rating){
+                @case (1) {
+                <div class="stars">
+                    <img src="./../../assets/Star.svg" alt="">
+                </div>
+                ({{ratingCount}})
+                }
+                @case (2) {
+                <div class="stars">
+                    <img src="./../../assets/Star.svg" alt="">
+                    <img src="./../../assets/Star.svg" alt="">
+                </div>
+                ({{ratingCount}})
+                }
+                @case (3) {
+                <div class="stars">
+                    <img src="./../../assets/Star.svg" alt="">
+                    <img src="./../../assets/Star.svg" alt="">
+                    <img src="./../../assets/Star.svg" alt="">
+                </div>
+                ({{ratingCount}})
+                }
+                @case (4) {
+                <div class="stars">
+                    <img src="./../../assets/Star.svg" alt="">
+                    <img src="./../../assets/Star.svg" alt="">
+                    <img src="./../../assets/Star.svg" alt="">
+                    <img src="./../../assets/Star.svg" alt="">
+                </div>
+                ({{ratingCount}})
+                }
+                @case (5) {
+                <div class="stars">
+                    <img src="./../../assets/Star.svg" alt="">
+                    <img src="./../../assets/Star.svg" alt="">
+                    <img src="./../../assets/Star.svg" alt="">
+                    <img src="./../../assets/Star.svg" alt="">
+                    <img src="./../../assets/Star.svg" alt="">
+                </div>
+                ({{ratingCount}})
+                }
+                @default {
+                <p [style.no-feedback]>No Feedback</p>
+                }
+                }
+            </div>
+            <div class="card-cost-info">
+                @if (discount != 0) {
+                <span class="card-discount">{{discount | currency}}</span>
+                }
+                <span class="card-price">{{price | currency}}</span>
+            </div>
+        </div>
+    </div>
+</div>
