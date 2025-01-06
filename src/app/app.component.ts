@@ -7,6 +7,7 @@ import { TrendingCoursesComponent } from './trending-courses/trending-courses.co
 import { AdvantagesBlockComponent } from './advantages-block/advantages-block.component';
 import { BecomeMentorComponent } from './become-mentor/become-mentor.component';
 import { FeedbackSliderComponent } from './feedback-slider/feedback-slider.component';
+import { PartnersComponent } from './partners/partners.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { FeedbackSliderComponent } from './feedback-slider/feedback-slider.compo
     AdvantagesBlockComponent,
     BecomeMentorComponent,
     FeedbackSliderComponent,
+    PartnersComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
