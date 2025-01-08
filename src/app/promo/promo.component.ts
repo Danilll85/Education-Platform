@@ -4,11 +4,10 @@ import { Advantage } from '../interfaces/advantage';
 import { AdvantageComponent } from '../advantage/advantage.component';
 
 @Component({
-  selector: 'app-promo',
-  standalone: true,
-  imports: [SearchbarBtnComponent, AdvantageComponent],
-  templateUrl: './promo.component.html',
-  styleUrl: './promo.component.css',
+    selector: 'app-promo',
+    imports: [SearchbarBtnComponent, AdvantageComponent],
+    templateUrl: './promo.component.html',
+    styleUrl: './promo.component.css'
 })
 export class PromoComponent {
   advantages: Array<Advantage> = [

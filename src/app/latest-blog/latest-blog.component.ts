@@ -5,11 +5,10 @@ import { TimeInterval } from 'rxjs/internal/operators/timeInterval';
 import { BlogCardComponent } from '../blog-card/blog-card.component';
 
 @Component({
-  selector: 'app-latest-blog',
-  standalone: true,
-  imports: [BlogCardComponent, TitleCasePipe],
-  templateUrl: './latest-blog.component.html',
-  styleUrl: './latest-blog.component.css',
+    selector: 'app-latest-blog',
+    imports: [BlogCardComponent, TitleCasePipe],
+    templateUrl: './latest-blog.component.html',
+    styleUrl: './latest-blog.component.css'
 })
 export class LatestBlogComponent {
   blogCards: Array<BlogCard> = [

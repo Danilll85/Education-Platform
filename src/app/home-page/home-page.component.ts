@@ -11,21 +11,20 @@ import { LatestBlogComponent } from './../latest-blog/latest-blog.component';
 import { FooterComponent } from './../footer/footer.component';
 
 @Component({
-  selector: 'app-home-page',
-  standalone: true,
-  imports: [
-    NavbarComponent,
-    PromoComponent,
-    TrendingCoursesComponent,
-    TopCategoriesComponent,
-    AdvantagesBlockComponent,
-    BecomeMentorComponent,
-    FeedbackSliderComponent,
-    PartnersComponent,
-    LatestBlogComponent,
-    FooterComponent,
-  ],
-  templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.css',
+    selector: 'app-home-page',
+    imports: [
+        NavbarComponent,
+        PromoComponent,
+        TrendingCoursesComponent,
+        TopCategoriesComponent,
+        AdvantagesBlockComponent,
+        BecomeMentorComponent,
+        FeedbackSliderComponent,
+        PartnersComponent,
+        LatestBlogComponent,
+        FooterComponent,
+    ],
+    templateUrl: './home-page.component.html',
+    styleUrl: './home-page.component.css'
 })
 export class HomePageComponent {}

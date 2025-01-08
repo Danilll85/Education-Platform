@@ -2,11 +2,10 @@ import { CurrencyPipe, TitleCasePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-card',
-  standalone: true,
-  imports: [TitleCasePipe, CurrencyPipe],
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.css',
+    selector: 'app-card',
+    imports: [TitleCasePipe, CurrencyPipe],
+    templateUrl: './card.component.html',
+    styleUrl: './card.component.css'
 })
 export class CardComponent {
   @Input() category: string = '';

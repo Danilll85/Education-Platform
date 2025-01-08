@@ -2,11 +2,10 @@ import { Time, TitleCasePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-blog-card',
-  standalone: true,
-  imports: [TitleCasePipe],
-  templateUrl: './blog-card.component.html',
-  styleUrl: './blog-card.component.css',
+    selector: 'app-blog-card',
+    imports: [TitleCasePipe],
+    templateUrl: './blog-card.component.html',
+    styleUrl: './blog-card.component.css'
 })
 export class BlogCardComponent {
   @Input() path: string = '';
