@@ -1,0 +1,19 @@
+<div class="blog-card-wrpper">
+    <img src="{{path}}" alt="loading...">
+    <div class="datetime-info">
+        <div class="date-wrapper">
+            {{date.getDate() + ', ' + date.toLocaleDateString('en-US', {month: 'long'}) + ' ' + date.getFullYear()}}
+        </div>
+        <div class="time-wrapper">
+            @if (readingTime.hours === 0) {
+            {{readingTime.minutes}} min read
+            } @else {
+            {{readingTime.hours}} hours {{readingTime.minutes}} min read
+            }
+
+        </div>
+    </div>
+    <h4>{{title}}</h4>
+    <p>{{description}}</p>
+    <button id="read-more-btn">{{'read more' | titlecase}}</button>
+</div>

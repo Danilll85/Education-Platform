@@ -22,7 +22,6 @@
 }
 
 .nav-panel-btn {
-  background-color: var(--pink-btn-color);
   border: none;
   border-radius: 0.5rem;
   padding-inline: 4.5rem;
@@ -30,7 +29,16 @@
   font-family: var(--montserrat-font);
   font-weight: 600;
   font-size: 1rem;
+}
+
+.active {
+  background-color: var(--pink-btn-color);
   color: var(--main-bg-color);
+}
+
+.non-active {
+  background-color: var(--main-bg-color);
+  color: var(--grey-color);
 }
 
 .cards-wrapper {
@@ -74,6 +82,12 @@
     padding-inline: 6rem;
     padding-block: 0.6rem;
     font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  .active {
+    background-color: var(--pink-btn-color);
+    color: var(--main-bg-color);
   }
 
   .cards-wrapper {
@@ -88,5 +102,6 @@
     font-size: 1.3rem;
     padding-inline: 7.3rem;
     padding-block: 1.16rem;
+    cursor: pointer;
   }
 }

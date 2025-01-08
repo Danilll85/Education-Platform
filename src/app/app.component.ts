@@ -8,6 +8,8 @@ import { AdvantagesBlockComponent } from './advantages-block/advantages-block.co
 import { BecomeMentorComponent } from './become-mentor/become-mentor.component';
 import { FeedbackSliderComponent } from './feedback-slider/feedback-slider.component';
 import { PartnersComponent } from './partners/partners.component';
+import { LatestBlogComponent } from './latest-blog/latest-blog.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +24,8 @@ import { PartnersComponent } from './partners/partners.component';
     BecomeMentorComponent,
     FeedbackSliderComponent,
     PartnersComponent,
+    LatestBlogComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

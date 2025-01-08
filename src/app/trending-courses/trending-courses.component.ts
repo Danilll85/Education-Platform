@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { Item } from '../interfaces/item';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-trending-courses',
   standalone: true,
-  imports: [CardComponent],
+  imports: [CardComponent, NgClass],
   templateUrl: './trending-courses.component.html',
   styleUrl: './trending-courses.component.css',
 })
-export class TrendingCoursesComponent {
+export class TrendingCoursesComponent implements OnChanges {
+  activeBtn: number = 1;
+  activeCategory: string = '';
+  filteredCards: Array<Item> = [];
   cards: Array<Item> = [
     {
       category: 'Art & Design',
@@ -100,4 +104,17 @@ export class TrendingCoursesComponent {
       path: './../../assets/ImageCardPlaceholder.svg',
     },
   ];
+
+  changeActiveBtn(btnNumber: number, event: MouseEvent) {
+    this.activeCategory = (event.target as HTMLElement).innerText;
+    this.activeBtn = btnNumber;
+
+    this.filteredCards = this.cards.filter(
+      (card) => card.category == this.activeCategory
+    );
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('OnChanges Triggered');
+  }
 }

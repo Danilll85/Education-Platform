@@ -1,0 +1,9 @@
+<div class="latest-blog-wrapper">
+    <h3>{{'the latest blog' | titlecase}}</h3>
+    <div class="blog-cards-wrapper">
+        @for (card of blogCards; track card) {
+        <app-blog-card [path]="card.path" [date]="card.date" [readingTime]="card.readingTime" [title]="card.title"
+            [description]="card.description"></app-blog-card>
+        }
+    </div>
+</div>

@@ -1,0 +1,38 @@
+.latest-blog-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 3.5rem;
+  margin-left: var(--default-margin);
+  margin-right: 6.375rem;
+  margin-bottom: 10rem;
+}
+
+.latest-blog-wrapper > h3 {
+  color: var(--blue-dark-color);
+  font-family: var(--rubik-font);
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.blog-cards-wrapper {
+  display: flex;
+  gap: 1.125rem;
+  justify-content: start;
+}
+
+@media screen and (min-width: 1440px) {
+  .latest-blog-wrapper {
+    gap: 4.6rem;
+    margin-right: 8.5rem;
+    margin-bottom: 13.3rem;
+  }
+
+  .latest-blog-wrapper > h3 {
+    font-size: 4rem;
+  }
+
+  .blog-cards-wrapper {
+    gap: 1.5rem;
+  }
+}

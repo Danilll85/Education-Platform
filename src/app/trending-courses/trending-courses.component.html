@@ -1,17 +1,36 @@
 <div class="trending-courses-wrapper">
     <h2>Trending Courses</h2>
     <div class="nav-panel">
-        <button class="nav-panel-btn">All</button>
-        <button class="nav-panel-btn">Business</button>
-        <button class="nav-panel-btn">Development</button>
-        <button class="nav-panel-btn">Marketing</button>
+        <button class="nav-panel-btn" [ngClass]="{'active': activeBtn === 1, 'nav-panel-btn': true}"
+            (click)="changeActiveBtn(1, $event)">
+            All
+        </button>
+        <button class="nav-panel-btn" [ngClass]="{'active': activeBtn === 2}" (click)="changeActiveBtn(2, $event)">
+            Business
+        </button>
+        <button class="nav-panel-btn" [ngClass]="{'active': activeBtn === 3}" (click)="changeActiveBtn(3, $event)">
+            Development
+        </button>
+        <button class="nav-panel-btn" [ngClass]="{'active': activeBtn === 4}" (click)="changeActiveBtn(4, $event)">
+            Marketing
+        </button>
     </div>
     <div class="cards-wrapper">
+        @if (activeBtn === 1) {
         @for (card of cards; track card) {
         <app-card [category]="card.category" [title]="card.title" [description]="card.description"
             [mentor]="card.mentor" [rating]="card.rating" [ratingCount]="card.ratingCount" [price]="card.price"
             [discount]="card.discount" [path]="card.path">
         </app-card>
+        }
+        }
+        @else {
+        @for (card of filteredCards; track card) {
+        <app-card [category]="card.category" [title]="card.title" [description]="card.description"
+            [mentor]="card.mentor" [rating]="card.rating" [ratingCount]="card.ratingCount" [price]="card.price"
+            [discount]="card.discount" [path]="card.path">
+        </app-card>
+        }
         }
     </div>
     <button id="more-items-btn">More Courses</button>
