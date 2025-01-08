@@ -17,6 +17,10 @@
   font-weight: 600;
   margin-left: 2.5rem;
   margin-right: 1.5rem;
+
+  > svg {
+    cursor: pointer;
+  }
 }
 
 #logo {

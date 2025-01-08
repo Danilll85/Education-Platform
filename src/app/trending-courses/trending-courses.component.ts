@@ -107,6 +107,8 @@ export class TrendingCoursesComponent implements OnChanges {
 
   changeActiveBtn(btnNumber: number, event: MouseEvent) {
     this.activeCategory = (event.target as HTMLElement).innerText;
+    console.log(this.activeCategory);
+
     this.activeBtn = btnNumber;
 
     this.filteredCards = this.cards.filter(
@@ -118,3 +120,5 @@ export class TrendingCoursesComponent implements OnChanges {
     console.log('OnChanges Triggered');
   }
 }
+
+// Caching?

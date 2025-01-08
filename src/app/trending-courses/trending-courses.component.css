@@ -24,11 +24,32 @@
 .nav-panel-btn {
   border: none;
   border-radius: 0.5rem;
-  padding-inline: 4.5rem;
+  /* padding-inline: 4.5rem; */
   padding-block: 0.5rem;
   font-family: var(--montserrat-font);
   font-weight: 600;
   font-size: 1rem;
+  white-space: nowrap;
+}
+
+.all {
+  padding-inline: 4.5rem;
+}
+
+.business {
+  padding-inline: 2.9rem;
+}
+
+.art-design {
+  padding-inline: 1.9rem;
+}
+
+.development {
+  padding-inline: 2rem;
+}
+
+.marketing {
+  padding-inline: 2.563rem;
 }
 
 .active {
@@ -79,10 +100,30 @@
 
   .nav-panel-btn {
     border-radius: 0.6rem;
-    padding-inline: 6rem;
+    /* padding-inline: 6rem; */
     padding-block: 0.6rem;
     font-size: 1.3rem;
     cursor: pointer;
+  }
+
+  .all {
+    padding-inline: 6rem;
+  }
+
+  .business {
+    padding-inline: 3.9rem;
+  }
+
+  .art-design {
+    padding-inline: 2.5rem;
+  }
+
+  .development {
+    padding-inline: 2.6rem;
+  }
+
+  .marketing {
+    padding-inline: 3.41rem;
   }
 
   .active {

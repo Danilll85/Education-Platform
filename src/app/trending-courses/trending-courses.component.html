@@ -1,17 +1,24 @@
 <div class="trending-courses-wrapper">
     <h2>Trending Courses</h2>
     <div class="nav-panel">
-        <button class="nav-panel-btn" [ngClass]="{'active': activeBtn === 1, 'nav-panel-btn': true}"
+        <button class="nav-panel-btn all" [ngClass]="{'active': activeBtn === 1,'non-active': activeBtn !== 1}"
             (click)="changeActiveBtn(1, $event)">
             All
         </button>
-        <button class="nav-panel-btn" [ngClass]="{'active': activeBtn === 2}" (click)="changeActiveBtn(2, $event)">
+        <button class="nav-panel-btn business" [ngClass]="{'active': activeBtn === 2,'non-active': activeBtn !== 2}"
+            (click)="changeActiveBtn(2, $event)">
             Business
         </button>
-        <button class="nav-panel-btn" [ngClass]="{'active': activeBtn === 3}" (click)="changeActiveBtn(3, $event)">
+        <button class="nav-panel-btn art-design" [ngClass]="{'active': activeBtn === 3,'non-active': activeBtn !== 3}"
+            (click)="changeActiveBtn(3, $event)">
+            Art & Design
+        </button>
+        <button class="nav-panel-btn development" [ngClass]="{'active': activeBtn === 4,'non-active': activeBtn !== 4}"
+            (click)="changeActiveBtn(4, $event)">
             Development
         </button>
-        <button class="nav-panel-btn" [ngClass]="{'active': activeBtn === 4}" (click)="changeActiveBtn(4, $event)">
+        <button class="nav-panel-btn marketing" [ngClass]="{'active': activeBtn === 5,'non-active': activeBtn !== 5}"
+            (click)="changeActiveBtn(5, $event)">
             Marketing
         </button>
     </div>
