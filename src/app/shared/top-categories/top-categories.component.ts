@@ -3,10 +3,10 @@ import { CategoryCard } from '../interfaces/category-card';
 import { CategoryCardComponent } from '../category-card/category-card.component';
 
 @Component({
-    selector: 'app-top-categories',
-    imports: [CategoryCardComponent],
-    templateUrl: './top-categories.component.html',
-    styleUrl: './top-categories.component.css'
+  selector: 'app-top-categories',
+  imports: [CategoryCardComponent],
+  templateUrl: './top-categories.component.html',
+  styleUrl: './top-categories.component.css',
 })
 export class TopCategoriesComponent {
   topCategoriesCards: Array<CategoryCard> = [

@@ -9,6 +9,7 @@
 }
 
 .category-wrapper {
+  position: relative;
   width: 6.375rem;
   display: flex;
   align-items: center;
@@ -21,6 +22,30 @@
   > svg {
     cursor: pointer;
   }
+}
+
+.categories-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.categories-dropdown a {
+  text-decoration: none;
+  color: #1c3554;
+  padding: 0.25rem 0.5rem;
+}
+
+.categories-dropdown a:hover {
+  background-color: #f0f0f0;
 }
 
 #logo {

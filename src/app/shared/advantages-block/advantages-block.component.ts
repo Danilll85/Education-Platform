@@ -3,10 +3,10 @@ import { Advantage2Component } from '../advantage-2/advantage-2.component';
 import { Advantage2 } from '../interfaces/advantage-2';
 
 @Component({
-    selector: 'app-advantages-block',
-    imports: [Advantage2Component],
-    templateUrl: './advantages-block.component.html',
-    styleUrl: './advantages-block.component.css'
+  selector: 'app-advantages-block',
+  imports: [Advantage2Component],
+  templateUrl: './advantages-block.component.html',
+  styleUrl: './advantages-block.component.css',
 })
 export class AdvantagesBlockComponent {
   advantages: Array<Advantage2> = [

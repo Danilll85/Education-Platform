@@ -1,0 +1,29 @@
+<div class="navbar-wrapper">
+    <img id="logo" src="./../../assets/Logo.svg" alt="logo...">
+    <app-searchbar id="search-bar"></app-searchbar>
+    <!-- <div class="category-wrapper">
+
+        <select (change)="onChange($event.target)">
+            @for (category of categories; track category) {
+            <option>{{category.title}}</option>
+            }
+        </select>
+        Category
+        <svg width="0.625rem" height="0.313rem" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L5 5L10 0H0Z" fill="#1C3554" />
+        </svg>
+    </div> -->
+    <div class="category-wrapper" (click)="toggleCategories()">
+        {{ selectedCategory || 'Category' }}
+        <svg width="0.625rem" height="0.313rem" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L5 5L10 0H0Z" fill="#1C3554" />
+        </svg>
+        <div class="categories-dropdown" *ngIf="isCategoriesOpen">
+            <a *ngFor="let category of categories" (click)="selectCategory(category.title)">
+                {{ category.title }}
+            </a>
+        </div>
+    </div>
+    <button id="member-btn">Become an Mentor</button>
+    <app-authorization></app-authorization>
+</div>

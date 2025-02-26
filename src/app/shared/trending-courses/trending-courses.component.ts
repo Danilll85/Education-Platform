@@ -4,10 +4,10 @@ import { Item } from '../interfaces/item';
 import { NgClass } from '@angular/common';
 
 @Component({
-    selector: 'app-trending-courses',
-    imports: [CardComponent, NgClass],
-    templateUrl: './trending-courses.component.html',
-    styleUrl: './trending-courses.component.css'
+  selector: 'app-trending-courses',
+  imports: [CardComponent, NgClass],
+  templateUrl: './trending-courses.component.html',
+  styleUrl: './trending-courses.component.css',
 })
 export class TrendingCoursesComponent implements OnChanges {
   activeBtn: number = 1;

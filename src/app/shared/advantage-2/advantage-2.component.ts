@@ -1,5 +1,5 @@
 import { TitleCasePipe } from '@angular/common';
-import { MyNumberPipe } from './../pipes/my-number.pipe';
+import { MyNumberPipe } from '../pipes/my-number.pipe';
 import { Component, Input } from '@angular/core';
 
 @Component({
