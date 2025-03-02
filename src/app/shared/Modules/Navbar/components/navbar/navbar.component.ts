@@ -1,5 +1,6 @@
 import { Component, Output } from '@angular/core';
 import { Category } from '../../../../Interfaces/category';
+import { Router } from '@angular/router';
 
 enum Categories {
   artAndDesign = 'Art & Design',
@@ -15,7 +16,6 @@ enum Categories {
 @Component({
   selector: 'app-navbar',
   standalone: false,
-  // imports: [SearchbarComponent, AuthorizationComponent, NgFor, NgIf],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
@@ -26,8 +26,10 @@ export class NavbarComponent {
   categories: Category[] = [
     { title: Categories.artAndDesign },
     { title: Categories.business },
-    { title: Categories.copyWriting },
+    { title: Categories.programming },
   ];
+
+  constructor(private router: Router) {}
 
   toggleCategories(): void {
     this.isCategoriesOpen = !this.isCategoriesOpen;
@@ -35,6 +37,14 @@ export class NavbarComponent {
 
   selectCategory(category: string): void {
     this.selectedCategory = category;
-    this.isCategoriesOpen = false; // Закрываем dropdown после выбора
+    this.isCategoriesOpen = false;
+
+    this.router.navigate(['/course-page'], {
+      state: { category: category },
+    });
+  }
+
+  hideDropdown() {
+    this.isCategoriesOpen = !this.isCategoriesOpen;
   }
 }
