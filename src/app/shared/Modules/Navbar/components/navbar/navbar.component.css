@@ -6,6 +6,10 @@
   padding-block: 1.125rem;
   padding-left: 6.5rem;
   padding-right: 6.563rem;
+
+  img:hover {
+    cursor: pointer;
+  }
 }
 
 .category-wrapper {
@@ -42,6 +46,7 @@
   text-decoration: none;
   color: #1c3554;
   padding: 0.25rem 0.5rem;
+  cursor: pointer;
 }
 
 .categories-dropdown a:hover {

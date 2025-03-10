@@ -6,24 +6,23 @@ import { BehaviorSubject, filter } from 'rxjs';
   providedIn: 'root',
 })
 export class NavigationService {
-  private history: string[] = [];
-  private historySubject = new BehaviorSubject<string[]>([]);
-  history$ = this.historySubject.asObservable();
+  private path = new BehaviorSubject<string>('');
+  private currentPage = new BehaviorSubject<string>('');
+  getPath = this.path.asObservable();
+  getCurrentPage = this.currentPage.asObservable();
 
-  constructor(private router: Router) {
-    this.router.events
-      .pipe(
-        filter(
-          (event): event is NavigationEnd => event instanceof NavigationEnd
-        )
-      )
-      .subscribe((event) => {
-        this.history.push(event.urlAfterRedirects);
-        this.historySubject.next([...this.history]);
-      });
+  constructor() {}
+
+
+  setPath(path: string) {
+    console.log(`set path is ${path}`);
+    
+    this.path.next(path);
   }
 
-  getPreviousUrl(): string[] {
-    return this.history;
+  setCurrentPage(page: string) {
+    console.log(`set page is ${page}`);
+    
+    this.currentPage.next(page);
   }
 }

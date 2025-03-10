@@ -1,5 +1,5 @@
 <div class="navbar-wrapper">
-    <img id="logo" src="./../../assets/Logo.svg" alt="logo...">
+    <img id="logo" src="./../../assets/Logo.svg" alt="logo..." (click)="logoTransition()">
     <app-searchbar id="search-bar"></app-searchbar>
     <div class="category-wrapper">
         Category
@@ -8,7 +8,9 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L5 5L10 0H0Z" fill="#1C3554" />
         </svg>
         <div class="categories-dropdown" *ngIf="isCategoriesOpen" (mouseleave)="hideDropdown()">
-            <a *ngFor="let category of categories" (click)="selectCategory(category.title)">
+            <a *ngFor="let category of categories; let i = index" (click)="sendCurrentPage(categories[i])"
+                (click)="sendPath()" (click)="selectCategory(category.title)">
+
                 {{ category.title }}
             </a>
         </div>

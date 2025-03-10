@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { NavigationService } from '../../../../Services/navigation.service';
 import { Router } from '@angular/router';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-path',
@@ -9,19 +10,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./path.component.css'],
   providers: [NavigationService],
 })
-export class PathComponent {
-  previousUrl: string[];
-  category: string | null = '';
+export class PathComponent implements OnInit {
+  path: string = '';
+  courseTitle: String = '';
 
   constructor(
     private navigatorService: NavigationService,
-    private router: Router
-  ) {
-    const navigaton = this.router.getCurrentNavigation();
-    console.log(navigaton);
+    private router: Router,
+    private cdr: ChangeDetectorRef
+  ) {}
 
-    this.previousUrl = navigatorService.getPreviousUrl();
+  ngOnInit(): void {
+    this.navigatorService.getPath.subscribe((path) => {
+      this.path = path;
+      this.onPathUpdated();
+      this.cdr.detectChanges();
+    });
+    
+    this.navigatorService.getCurrentPage.subscribe((title) => {
+      this.courseTitle = title;
+      this.getCurrentPage();
+    })
+  }
 
-    console.log(this.previousUrl);
+  onPathUpdated() {
+    console.log(`hook works: ${this.path}`);
+  }
+
+  getCurrentPage(){
+    console.log(`current page is ${this.courseTitle}`);
   }
 }
