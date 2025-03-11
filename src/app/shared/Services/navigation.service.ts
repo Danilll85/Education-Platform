@@ -13,16 +13,12 @@ export class NavigationService {
 
   constructor() {}
 
-
   setPath(path: string) {
-    console.log(`set path is ${path}`);
-    
     this.path.next(path);
   }
 
-  setCurrentPage(page: string) {
-    console.log(`set page is ${page}`);
-    
+  setCurrentPage(page: string) {    
     this.currentPage.next(page);
   }
 }
+

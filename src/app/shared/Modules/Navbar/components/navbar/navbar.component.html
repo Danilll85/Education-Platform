@@ -8,8 +8,7 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L5 5L10 0H0Z" fill="#1C3554" />
         </svg>
         <div class="categories-dropdown" *ngIf="isCategoriesOpen" (mouseleave)="hideDropdown()">
-            <a *ngFor="let category of categories; let i = index" (click)="sendCurrentPage(categories[i])"
-                (click)="sendPath()" (click)="selectCategory(category.title)">
+            <a *ngFor="let category of categories; let i = index" (click)="selectCategory(category.title)">
 
                 {{ category.title }}
             </a>

@@ -1,4 +1,4 @@
-import { Component, Output, SimpleChanges } from '@angular/core';
+import { Component, Injectable, Output, SimpleChanges } from '@angular/core';
 import { Category } from '../../../../Interfaces/category';
 import { Router, RouterLink } from '@angular/router';
 import { NavigationService } from '../../../../Services/navigation.service';
@@ -19,9 +19,9 @@ enum Categories {
   standalone: false,
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
-  providers: [NavigationService],
 })
-export class NavbarComponent {
+
+export class NavbarComponent  {
   selectedCategory: string = '';
   isCategoriesOpen: boolean = false;
   currentUrl: string = '';
@@ -50,17 +50,15 @@ export class NavbarComponent {
   selectCategory(category: string): void {
     this.selectedCategory = category;
     this.isCategoriesOpen = false;
-    this.router.navigate(['/course-page']);
-  }
 
-  sendPath() {
     this.navigatorService.setPath('/');
-  }
+    this.navigatorService.setCurrentPage(category);
 
-  sendCurrentPage(category: Category) {
-    console.log(`send category: ${category.title}`);
-    
-    this.navigatorService.setCurrentPage(category.title);
+    this.navigatorService.getPath.subscribe((path) => {
+      console.log(`path form getPath is ${path}`);
+    });
+
+    this.router.navigate(['/course-page']);
   }
 
   hideDropdown() {
